@@ -1,3 +1,4 @@
+//Abdul's
 class Solution {
     public int candy(int[] ratings) {
         int candies = 0, n = ratings.length;
