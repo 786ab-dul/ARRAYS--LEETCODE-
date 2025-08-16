@@ -1,0 +1,26 @@
+//Abdul's
+class Solution {
+    public void rotate(int[][] matrix) {
+        int n = matrix.length; //to get a length of the matrix
+
+        //transposing the matrix
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                //swap matrix[i][j] with matrix[j][i]
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+
+        //reversing the matrix
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n / 2; j++) {
+                //swap matrix[i][j] with matrix[i][n-j-1]
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[i][n - j - 1];
+                matrix[i][n - j - 1] = temp;
+            }
+        }
+    }
+}
