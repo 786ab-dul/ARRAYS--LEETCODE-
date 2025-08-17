@@ -1,3 +1,4 @@
+//Abdul's
 class Solution {
     public int thirdMax(int[] nums) {
         long first = Long.MIN_VALUE;
